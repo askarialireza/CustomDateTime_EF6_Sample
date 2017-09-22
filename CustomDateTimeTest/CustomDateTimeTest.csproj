@@ -70,7 +70,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\ComplexTypes\CustomDateTime.cs" />
-    <Compile Include="Models\ComplexTypes\PersianDate.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
