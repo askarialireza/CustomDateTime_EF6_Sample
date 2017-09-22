@@ -1,7 +1,7 @@
 ﻿
 namespace Models.ComplexTypes
 {
-    public class CustomDateTime : object
+    public class CustomDateTime : System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute
     {
         public CustomDateTime() : base()
         {
@@ -38,7 +38,6 @@ namespace Models.ComplexTypes
                 PersianDate.Milisecond = _dateTime.Millisecond;
             }
         }
-
 
         public Models.ComplexTypes.PersianDate PersianDate { get; }
     }
