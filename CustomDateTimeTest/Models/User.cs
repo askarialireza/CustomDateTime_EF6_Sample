@@ -12,7 +12,7 @@
                 // For Showing " CreateDateTime " instead of " CreateDateTime_DateTime " in DB Tables Columns
 
                 Property(current => current.CreateDateTime.DateTime)
-                    .HasColumnName(nameof(User.CreateDateTime));
+                    .HasColumnName(nameof(Models.User.CreateDateTime));
             }
         }
 
