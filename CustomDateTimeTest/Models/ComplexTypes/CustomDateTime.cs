@@ -9,6 +9,7 @@ namespace Models.ComplexTypes
         }
 
         private System.DateTime _dateTime;
+
         public System.DateTime DateTime
         {
             get
@@ -23,11 +24,17 @@ namespace Models.ComplexTypes
                     new System.Globalization.PersianCalendar();
 
                 PersianDate.Year = oPersianCalendar.GetYear(_dateTime);
+
                 PersianDate.Month = oPersianCalendar.GetMonth(_dateTime);
+
                 PersianDate.Day = oPersianCalendar.GetDayOfMonth(_dateTime);
+
                 PersianDate.Hour = _dateTime.Hour;
+
                 PersianDate.Minute = _dateTime.Minute;
+
                 PersianDate.Second = _dateTime.Second;
+
                 PersianDate.Milisecond = _dateTime.Millisecond;
             }
         }
