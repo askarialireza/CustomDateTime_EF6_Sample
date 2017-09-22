@@ -27,13 +27,13 @@ namespace CustomDateTimeTest
                 oDatabaseContext.SaveChanges();
 
                 System.DateTime fromDateTime =
-                    new System.DateTime(System.DateTime.Now.Year, System.DateTime.Now.Month, System.DateTime.Now.Day, hour: 20, minute: 40, second: 0);
+                    new System.DateTime(System.DateTime.Now.Year, System.DateTime.Now.Month, System.DateTime.Now.Day, hour: 0, minute: 0, second: 0);
 
                 System.DateTime toDateTime =
-                    new System.DateTime(System.DateTime.Now.Year, System.DateTime.Now.Month, System.DateTime.Now.Day, hour: 20, minute: 34, second: 0);
+                    new System.DateTime(System.DateTime.Now.Year, System.DateTime.Now.Month, System.DateTime.Now.Day, hour: 23, minute: 59, second: 59);
 
                 var varList = oDatabaseContext.Users
-                    .Where(current => current.CreateDateTime.DateTime >= fromDateTime)
+                    //.Where(current => current.CreateDateTime.DateTime >= fromDateTime)
                     //.Where(current => current.CreateDateTime.DateTime <= toDateTime)
                     .ToList();
 
@@ -41,10 +41,7 @@ namespace CustomDateTimeTest
                 {
                     System.Console.WriteLine();
 
-                    System.Console.WriteLine(
-                        string.Format("{0} -- {1}/{2}/{3} {4}:{5}:{6}", user.CreateDateTime.DateTime,
-                        user.CreateDateTime.PersianDate.Year, user.CreateDateTime.PersianDate.Month, user.CreateDateTime.PersianDate.Day,
-                        user.CreateDateTime.PersianDate.Hour, user.CreateDateTime.PersianDate.Minute, user.CreateDateTime.PersianDate.Second));
+                    System.Console.WriteLine(user.CreateDateTime.DateTime.ToString() + " ||| " + user.CreateDateTime.PersianDate.ToString());
 
                     System.Console.WriteLine();
                 }
